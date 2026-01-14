@@ -1,0 +1,19 @@
+﻿services:
+  testdocker:
+    image: testdocker
+    build:
+      context: .
+      dockerfile: TestDocker/Dockerfile
+
+  hashing:
+    image: hashing
+    build:
+      context: .
+      dockerfile: Hashing /Dockerfile
+
+  hashing-1:
+    image: hashing-1
+    build:
+      context: .
+      dockerfile: Hashing/Dockerfile
+

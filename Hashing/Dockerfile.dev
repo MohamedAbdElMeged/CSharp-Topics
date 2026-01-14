@@ -1,0 +1,12 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0  
+WORKDIR /src  
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="$PATH:/root/.dotnet/tools"
+COPY ["Hashing.csproj", "./"]  
+RUN dotnet restore "Hashing.csproj"
+
+COPY . .  
+ENV ASPNETCORE_URLS=http://+:5001  
+ENV ASPNETCORE_ENVIRONMENT=Development 
+COPY ["init.sh", "/usr/bin/"]  
+RUN chmod +x /usr/bin/init.sh

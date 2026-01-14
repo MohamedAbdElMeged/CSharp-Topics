@@ -1,0 +1,40 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  hashing-1:
+    build:
+      context: "/Users/mohamedabdelmeged/Desktop/training/dotnet/CSharpTopics"
+      dockerfile: "Hashing/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net10.0/Hashing.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "hashing-1:dev"
+    ports: []
+    volumes:
+    - "/Users/mohamedabdelmeged/Desktop/training/dotnet/CSharpTopics/Hashing:/app:rw"
+    - "/Users/mohamedabdelmeged/Desktop/training/dotnet/CSharpTopics:/src:rw"
+    - "/Users/mohamedabdelmeged/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"
+  testdocker:
+    build:
+      context: "/Users/mohamedabdelmeged/Desktop/training/dotnet/CSharpTopics"
+      dockerfile: "TestDocker/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net10.0/TestDocker.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "testdocker:dev"
+    ports: []
+    volumes:
+    - "/Users/mohamedabdelmeged/Desktop/training/dotnet/CSharpTopics/TestDocker:/app:rw"
+    - "/Users/mohamedabdelmeged/Desktop/training/dotnet/CSharpTopics:/src:rw"
+    - "/Users/mohamedabdelmeged/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"

@@ -1,0 +1,14 @@
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "br, deflate, gzip, x-gzip",
+    "Host": "examples.http-client.intellij.net",
+    "User-Agent": "IntelliJ HTTP Client/JetBrains Rider 2025.3.1",
+    "X-Forwarded-Host": "examples.http-client.intellij.net",
+    "X-Forwarded-Scheme": "https",
+    "X-Scheme": "https"
+  },
+  "origin": "188.54.58.180",
+  "url": "https://examples.http-client.intellij.net/get"
+}
